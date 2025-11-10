@@ -3,37 +3,56 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Blog Personal</title>
+	<title>Formulario</title>
+    <link rel="icon" href="img/favicon_link.ico" type="image/x-icon"/> <!--Esto es para el iconito de la pestaña-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </head>
 <body>
-	<header>
-		<h1>Blog de Juan</h1>
-		<nav>
-			<ul>
-				<li><a href="#inicio">Inicio</a></li>
-				<li><a href="#articulos">Artículos</a></li>
-				<li><a href="#contacto">Contacto</a></li>
-			</ul>
-		</nav>
-	</header>
-	<section>
-		<article>
-			<h2>Primer Artículo</h2>
-			<p>Contenido del primer artículo.</p>
-		</article>
-		<article>
-			<h2>Segundo Artículo</h2>
-			<p>Contenido del segundo artículo.</p>
-		</article>
-	</section>
-	<aside>
-		<h2>Sobre Mí</h2>
-		<p>Información sobre el autor del blog.</p>
-	</aside>
-	<footer>
-		<p>&copy; 2024 Blog de Juan. Todos los derechos reservados.</p>
-	</footer>
+    <!--Esto va a ser el cuerpo como tal-->
+    <div class="contenido">
+        <h2>Formulario</h2>
+        <form action="/submit" method="post">
+            <!--Primera cuestión: texto-->
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+            <br><br>
+            <!--Segunda cuestión: correo-->
+            <label for="email">Correo electrónico:</label><br>
+            <input type="text" id="email" name="email" placeholder="Escribe tu dirección de correo" required>
+            <br><br>
+            <!--Tercera cuestión: lista de opciones-->
+            <label for="pais">País:</label><br>
+            <select type="text" id="pais" name="pais" required>
+                <option value="es">España</option>
+                <option value="hy">Hyrule</option>
+                <option value="ot">Otro</option>
+            </select>
+            <br><br>
+            <!--Cuarta cuestión: botones de radio-->
+            <label for="vivienda">¿Dónde vives?</label><br>
+            <label><input type="radio" name="vivienda" value="ciudad">Ciudad</label><br>
+            <label><input type="radio" name="vivienda" value="campo">Campo</label><br>
+            <label><input type="radio" name="vivienda" value="otro">Otro</label><br>
+            <br><br>
+            <!--Quinta cuestión: casillas-->
+            <label for="vivienda">¿Qué buscas?</label><br>
+            <label><input type="checkbox" name="buscas" value="grial">El Santo Grial</label><br>
+            <label><input type="checkbox" name="buscas" value="coco">Un coco traído por una golondrina</label><br>
+            <label><input type="checkbox" name="buscas" value="granada">la Santa Granada de Antioquía</label><br>
+            <br><br>
+            <!--Sexta cuestión: área de texto-->
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" rows="3" cols="50" placeholder="Escribe un mensaje aquí"></textarea>
+            <br><br>
+            <!--Botón de envío-->
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <!--Aquí va el pie-->
+    <footer>
+        <hr>
+        <p>&copy; 2025 Todos los derechos no reservados: esto es solo para practicar.</p>
+    </footer>
 </body>
 </html>
